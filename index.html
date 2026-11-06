@@ -4,85 +4,269 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>日常は、まだまだ面白くなる。</title>
+  <meta name="description" content="日常に新しい驚きと楽しさを。及川実星の志望動機と、実現したい体験を紹介します。">
+  <title>乃村工藝社志望動機｜Misei Oikawa</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="hero">
-    <p class="eyebrow">A WORLD OF LITTLE DISCOVERIES</p>
-    <h1>日常は、<br>まだまだ面白くなる。</h1>
-    <p>何気ない景色に、まだ知らない面白さを。</p>
-    <button id="start">体験してみる ↓</button>
-    <p class="catch">人の「えっ！」が、私の原動力。</p>
-  </header>
+<header class="header">
+  <a href="#top" class="logo">MISEI OIKAWA</a>
+  <nav>
+    <a href="#origin">MY ORIGIN</a>
+    <a href="#future">MY FUTURE</a>
+    <a href="#nomura">WHY NOMURA</a>
+  </nav>
+</header>
 
-  <main>
-    <section id="quiz" class="section">
-      <p class="eyebrow">01 / LISTEN</p>
-      <h2>この曲、何の音からできているでしょう？</h2>
-      <p>まずは、耳をすませてみてください。</p>
+<main>
 
-    <audio id="bgm" controls preload="auto" loop>
-      <source src="hanabi.mp3" type="audio/mpeg">
-    </audio>
+  <!-- 01 OPENING -->
+  <section class="hero" id="top">
+    <p class="eyebrow">A LITTLE SURPRISE CAN CHANGE THE WORLD.</p>
+    <h1>乃村工藝社<br><br><span>志望動機</span></h1>
+    <p class="hero-description">
+      いつもの景色に、まだ知らない楽しさを広めたい。<br>
+      人の心が動く瞬間を、発想と工夫で生み出したい。
+    </p>
+    <a href="#quiz" class="scroll-link">SCROLL TO EXPERIENCE <span>↓</span></a>
+  </section>
 
 
-    </section>
+  <!-- 02 SOUND QUIZ -->
+  <section class="section quiz-section" id="quiz">
+    <p class="section-number">01 / DISCOVER</p>
+    <p class="eyebrow">LISTEN CAREFULLY</p>
+    <h2>この音の正体は、<br>何だと思いますか？</h2>
+    <p class="section-lead">
+      まずは、耳をすませてみてください。<br>
+      何気ない日常にある音が、音楽の一部になっています。
+    </p>
 
-    <section class="section story">
-      <p class="eyebrow">02 / MY ORIGIN</p>
-      <h2>聞き流していた音が、<br>作品になった。</h2>
-      <p>
-        高校時代から、雨音や電車の走行音など、
-        日常にある音とピアノを組み合わせた楽曲を制作してきた。
-        何気ない音も、見方を変えれば新しい表情を持ち始める。
+    <div class="audio-card">
+      <div class="sound-symbol">♫</div>
+      <p>AN EVERYDAY SOUND, REIMAGINED.</p>
+      <button id="playButton" class="main-button" type="button">
+        音楽を再生する
+      </button>
+      <p class="audio-note">曲名『花火』
+        音量にご注意のうえ、お楽しみください。</p>
+    </div>
+
+    <div class="quiz-box">
+      <p class="quiz-question">
+        クイズです。楽曲に使用されている音は、どれでしょうか？<br>
+        <span class="quiz-hint">正解だと思うものを2つ選んでください。</span>
       </p>
-    </section>
 
-    <section class="section" id="experience">
-      <p class="eyebrow">03 / IMAGINE</p>
-      <h2>あなたなら、どう体験させる？</h2>
-      <p>まずは、心を動かしたい感覚を選んでください。</p>
-
-      <div class="choices">
-        <button class="sense" data-sense="音">♫ 音</button>
-        <button class="sense" data-sense="光">✧ 光</button>
-        <button class="sense" data-sense="色">◉ 色</button>
-        <button class="sense" data-sense="動き">↗ 動き</button>
+      <div class="quiz-options">
+        <button class="quiz-option" data-answer="rain">A. 雨が窓を打つ音</button>
+        <button class="quiz-option" data-answer="door">B. ドアを開閉する音</button>
+        <button class="quiz-option" data-answer="train">C. 電車が走る音</button>
+        <button class="quiz-option" data-answer="microwave">D. 電子レンジの扉を閉める音</button>
       </div>
 
-      <p>次に、参加の仕方を選んでください。</p>
-      <div class="choices">
-        <button class="method" data-method="触れる">触れる</button>
-        <button class="method" data-method="歩く">歩く</button>
-        <button class="method" data-method="選ぶ">選ぶ</button>
-        <button class="method" data-method="共有する">共有する</button>
-      </div>
+      <p id="quizResult" class="quiz-result" aria-live="polite"></p>
+    </div>
+  </section>
 
-      <div id="preview" class="preview">
-        <p>YOUR IDEA</p>
-        <h3 id="preview-title">まだ見ぬ体験を、ここから。</h3>
-        <p id="preview-description">感覚と参加方法を選ぶと、展示のアイデアが生まれます。</p>
-      </div>
-    </section>
 
-    <section class="section future">
-      <p class="eyebrow">04 / MY FUTURE</p>
-      <h2>空間から、日常の景色まで。</h2>
+  <!-- 03 ORIGIN -->
+  <section class="section origin-section" id="origin">
+    <p class="section-number">02 / MY ORIGIN</p>
+    <p class="eyebrow">FINDING BEAUTY IN THE ORDINARY</p>
+    <h2>生活の中で聞き流していた音が、<br>心を動かす音楽になる。</h2>
+
+    <p class="body-text">
+      先ほどの音楽は『花火』という音楽でした。ですが、実際に用いていた音は花火の音ではなく、電子レンジの音やドアを閉める音を使用しています。
+      このように、私は高校時代から、雨音や電車の走行音など、日常の中にある生活音とピアノを組み合わせた楽曲を制作しています。
+    </p>
+
+    <p class="body-text">
+      普段は意識することのない音も、組み合わせや表現を変えることで、全く異なる印象を生み出します。その面白さに惹かれ、身近なものの中に新しい可能性を見つけることを続けてきました。
+      2026年に同時間に開催された『パリと東京を繋ぐ』がテーマの写真展で東京の生活音を用いた自作曲を流し、両都市の空間を接続する効果を生みだし、現地来場者から反響をいただきました。
+      また、楽曲配信では再生データを分析し、広告機能も活用しながら届け方を工夫してきました。現在はゼミで映像制作にも取り組み、自作曲をBGMに取り入れています。
+      
+    </p>
+
+    <div class="quote-panel">
       <p>
-        音や光、映像、空間を組み合わせ、
-        訪れた人自身が発見や驚きに出会える体験をつくりたい。
-        そしていつか、特別な場所だけでなく、
-        何気ない日常にも小さな感動を広げていきたい。
+        見慣れたものも、<br>
+        視点を変えれば、<br>
+        <span>新しい体験になる。</span>
       </p>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>日常は、まだまだ面白くなる。</p>
-  </footer>
+    <p class="body-text">
+      私にとって表現とは、何かを一方的に伝えるだけではありません。受け取る人の中に新しい発見や驚きが生まれることに、面白さを感じています。
+      表現を生み出すだけでなく、それが誰かに届き、新たな視点や感情を生むまで工夫し続けます。
+    </p>
+  </section>
 
-  <script src="script.js"></script>
+
+  <!-- 04 FUTURE -->
+  <section class="section future-section" id="future">
+    <p class="section-number">03 / MY FUTURE</p>
+    <p class="eyebrow">A WORLD WE CAN ENJOY TOGETHER</p>
+    <h2>そこにいる全員が、<br>夢中になれる空間を。</h2>
+
+    <p class="body-text">
+      私が将来実現したいのは、足を踏み入れた瞬間から心が弾み、施設全体の世界観に夢中になれるエンターテインメント空間です。
+    </p>
+
+    <p class="body-text">
+      思いがけない演出に驚いたり、目の前の出来事を隣の人と共有したり。友人や家族はもちろん、その場に居合わせた人同士にも自然と会話や笑顔が生まれるような場所をつくりたいです。
+    </p>
+
+    <p class="body-text">
+      そして、帰るときには「今日、本当に楽しかった」と感じ、誰かに話したくなり、大切な人とまた訪れたいと思ってもらえる。そんな思い出に残る体験を実現したいと考えています。
+      規模やジャンルにこだわるのではなく、訪れた人の心が動く体験を生み出すことにこだわり、発想と工夫を重ねながら、空間づくりに挑戦していきたいです。
+    </p>
+  </section>
+
+
+  <!-- 05 INTERACTIVE EXPERIENCE -->
+  <section class="section interaction-section" id="interaction">
+    <p class="section-number">04 / LET'S CREATE</p>
+    <p class="eyebrow">YOUR IDEAS CREATE EXPERIENCES</p>
+    <h2>それでは、<br>体験してみてください</h2>
+
+    <p class="section-lead">
+      同じ空間でも、世界観や仕掛けの組み合わせによって、訪れる人の感じ方は変わります。
+    </p>
+
+    <p class="body-text">
+      ここでは、空間づくりの一部を体験していただきます。
+      自分自身の発想で、オリジナルのエンターテインメント空間をつくってみてください。
+    </p>
+
+    <div class="choice-group">
+      <h3>01. どのような世界観に惹かれますか？</h3>
+      <p class="choice-description">まずは、空間全体の雰囲気を選んでください。</p>
+
+      <div class="choice-options">
+        <button class="choice-button" data-world="fantasy">
+          幻想的な世界
+        </button>
+        <button class="choice-button" data-world="nature">
+          自然に包まれる世界
+        </button>
+        <button class="choice-button" data-world="future">
+          未来を感じる世界
+        </button>
+      </div>
+    </div>
+
+    <div class="choice-group">
+      <h3>02. どのような体験を生み出したいですか？</h3>
+      <p class="choice-description">その世界で、訪れる人に届けたい体験を選んでください。</p>
+
+      <div class="choice-options">
+        <button class="choice-button" data-experience="surprise">
+          予想外の仕掛けに出会う
+        </button>
+        <button class="choice-button" data-experience="together">
+          誰かと一緒に楽しむ
+        </button>
+        <button class="choice-button" data-experience="discover">
+          新しい発見をする
+        </button>
+      </div>
+    </div>
+
+    <button id="createButton" class="main-button" type="button">
+      空間をつくる
+    </button>
+
+    <div id="creationResult" class="creation-result" aria-live="polite">
+      <p class="result-label">YOUR EXPERIENCE</p>
+      <h3 id="resultTitle">あなたなら、どんな世界をつくりますか？</h3>
+      <p id="resultDescription">
+        2つの要素を選ぶと、あなたが考えた空間が完成します。
+      </p>
+    </div>
+  </section>
+
+
+  <!-- 06 THE INTENTION -->
+  <section class="section intention-section" id="intention">
+    <p class="section-number">05 / THE IDEA BEHIND THIS EXPERIENCE</p>
+    <p class="eyebrow">WHY I MADE THIS</p>
+    <h2>選ぶことで、<br>体験が変わる面白さ。</h2>
+
+    <p class="body-text">
+      このコンテンツを用意したのは、採用担当者の方にも、実際に空間づくりを体験していただきたいと考えたからです。
+    </p>
+
+    <p class="body-text">
+      自分で世界観や体験を選び、それらを組み合わせることで、同じ空間でも生まれる楽しさや印象が変わります。その過程を通じて、空間づくりの面白さを感じていただけるようにしました。
+    </p>
+
+    <div class="quote-panel">
+      <p>
+        人の心が動く体験は、<br>
+        <span>発想や工夫によって生み出せる。</span>
+      </p>
+    </div>
+
+    <p class="body-text">
+      その考えを言葉で説明するだけでなく、実際に選択し、体験していただくことで伝えたい。そんな意図を込めています。
+    </p>
+  </section>
+
+
+  <!-- 07 WHY NOMURA -->
+  <section class="section nomura-section" id="nomura">
+    <p class="section-number">06 / WHY NOMURA</p>
+    <p class="eyebrow">FROM MY IDEA TO THE NEXT EXPERIENCE</p>
+    <h2>だからこそ、<br>乃村工藝社で実現したい。</h2>
+
+    <p class="body-text">
+      私は、自分の発想や工夫によって、人に驚きと楽しさ、感動を届けることが好きです。特に、予想を超える仕掛けに出会った人が、思わず「えっ！」と声を上げ、笑顔になる瞬間に喜びを感じます。
+    </p>
+
+    <p class="body-text">
+      多様な施設づくりを手がける乃村工藝社に魅力を感じています。中でも関心があるのは、訪れる人を非日常の世界へと引き込み、驚きや楽しさを生み出すエンターテインメント施設です。
+    </p>
+
+    <p class="body-text">
+      音楽制作を通じて、何気ない日常の音に新しい価値を見いだしてきた経験。自分の発想や工夫によって、人の感じ方を変えることへの面白さ。これらを今度は、音楽という表現の枠を越え、空間全体を使った体験へと広げたいと考えています。
+    </p>
+
+    <p class="body-text">
+      世界観に夢中になり、予想外の仕掛けに心を躍らせ、そこにいる人同士にも自然と笑顔が広がる。帰った後も誰かに話したくなり、大切な人とまた訪れたくなる。そんな体験を、発想と工夫を重ねながら形にしていきたいです。
+    </p>
+
+    <div class="quote-panel">
+      <p>
+        人の笑顔が、<br>
+        <span>私の原動力。人の笑顔をつくりたい。</span>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- END -->
+  <section class="final-section">
+    <p class="eyebrow">THANK YOU FOR EXPERIENCING</p>
+    <h2>日常に、<br>まだ知らない驚きを。</h2>
+    <p>
+      人の心が動く瞬間を、これからも生み出していきたい。
+    </p>
+    <p class="signature">Misei Oikawa</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>MISEI OIKAWA / PORTFOLIO</p>
+  <a href="#top">BACK TO TOP ↑</a>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+
+
