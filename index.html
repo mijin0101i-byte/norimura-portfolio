@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日常は、まだまだ面白くなる。</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <p class="eyebrow">A WORLD OF LITTLE DISCOVERIES</p>
+    <h1>日常は、<br>まだまだ面白くなる。</h1>
+    <p>何気ない景色に、まだ知らない面白さを。</p>
+    <button id="start">体験してみる ↓</button>
+    <p class="catch">人の「えっ！」が、私の原動力。</p>
+  </header>
+
+  <main>
+    <section id="quiz" class="section">
+      <p class="eyebrow">01 / LISTEN</p>
+      <h2>この曲、何の音からできているでしょう？</h2>
+      <p>まずは、耳をすませてみてください。</p>
+
+    <audio id="bgm" controls preload="auto" loop>
+      <source src="hanabi.mp3" type="audio/mpeg">
+    </audio>
+
+
+    </section>
+
+    <section class="section story">
+      <p class="eyebrow">02 / MY ORIGIN</p>
+      <h2>聞き流していた音が、<br>作品になった。</h2>
+      <p>
+        高校時代から、雨音や電車の走行音など、
+        日常にある音とピアノを組み合わせた楽曲を制作してきた。
+        何気ない音も、見方を変えれば新しい表情を持ち始める。
+      </p>
+    </section>
+
+    <section class="section" id="experience">
+      <p class="eyebrow">03 / IMAGINE</p>
+      <h2>あなたなら、どう体験させる？</h2>
+      <p>まずは、心を動かしたい感覚を選んでください。</p>
+
+      <div class="choices">
+        <button class="sense" data-sense="音">♫ 音</button>
+        <button class="sense" data-sense="光">✧ 光</button>
+        <button class="sense" data-sense="色">◉ 色</button>
+        <button class="sense" data-sense="動き">↗ 動き</button>
+      </div>
+
+      <p>次に、参加の仕方を選んでください。</p>
+      <div class="choices">
+        <button class="method" data-method="触れる">触れる</button>
+        <button class="method" data-method="歩く">歩く</button>
+        <button class="method" data-method="選ぶ">選ぶ</button>
+        <button class="method" data-method="共有する">共有する</button>
+      </div>
+
+      <div id="preview" class="preview">
+        <p>YOUR IDEA</p>
+        <h3 id="preview-title">まだ見ぬ体験を、ここから。</h3>
+        <p id="preview-description">感覚と参加方法を選ぶと、展示のアイデアが生まれます。</p>
+      </div>
+    </section>
+
+    <section class="section future">
+      <p class="eyebrow">04 / MY FUTURE</p>
+      <h2>空間から、日常の景色まで。</h2>
+      <p>
+        音や光、映像、空間を組み合わせ、
+        訪れた人自身が発見や驚きに出会える体験をつくりたい。
+        そしていつか、特別な場所だけでなく、
+        何気ない日常にも小さな感動を広げていきたい。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>日常は、まだまだ面白くなる。</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

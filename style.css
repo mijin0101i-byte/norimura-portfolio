@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --navy: #101827;
+  --navy-light: #1d2b40;
+  --gold: #d8bd8a;
+  --white: #f5f1e9;
+  --muted: #b9bdc6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 70px 24px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 45%, #695b78 0%, #29334c 35%, #101827 75%);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(216, 189, 138, 0.2);
+  border-radius: 50%;
+  animation: float 9s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.hero::after {
+  width: 700px;
+  height: 700px;
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  from {
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+  to {
+    transform: scale(1.12);
+    opacity: 0.8;
+  }
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  margin-bottom: 25px;
+}
+
+h1, h2, h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 400;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 82px);
+  line-height: 1.65;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.hero > p:not(.eyebrow) {
+  color: #dedce0;
+  letter-spacing: 0.12em;
+  margin-top: 22px;
+}
+
+.catch {
+  margin-top: 65px !important;
+  color: var(--gold) !important;
+  font-size: 13px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.hero button {
+  margin-top: 35px;
+  padding: 14px 42px;
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  transition: 0.4s;
+}
+
+.hero button:hover {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-3px);
+}
+
+.section {
+  max-width: 1050px;
+  margin: auto;
+  padding: 130px 35px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(27px, 4vw, 43px);
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  margin: 10px 0 25px;
+}
+
+.section > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2.5;
+}
+
+audio {
+  display: block;
+  width: min(440px, 100%);
+  margin: 40px auto;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 35px auto;
+}
+
+.choices button {
+  min-width: 130px;
+  padding: 13px 25px;
+  border: 1px solid rgba(216, 189, 138, 0.5);
+  border-radius: 40px;
+  background: transparent;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.choices button:hover,
+.choices button.active {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+#quiz-result {
+  color: var(--gold);
+  min-height: 30px;
+}
+
+.story {
+  max-width: none;
+  background: linear-gradient(180deg, #172338, #202d40);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.story > p:last-child,
+.future > p:last-child {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.preview {
+  max-width: 720px;
+  min-height: 260px;
+  margin: 65px auto 0;
+  padding: 55px 30px;
+  border: 1px solid rgba(216, 189, 138, 0.45);
+  background:
+    radial-gradient(circle at 50% 50%, #3e4864, #19253a 75%);
+  transition: 0.5s;
+}
+
+.preview > p:first-child {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+}
+
+.preview h3 {
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+.preview > p:last-child {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.future {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+footer {
+  padding: 45px 20px;
+  text-align: center;
+  color: var(--gold);
+  border-top: 1px solid rgba(216, 189, 138, 0.2);
+  font-family: 'Shippori Mincho', serif;
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 90px 22px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .choices button {
+    min-width: 115px;
+  }
+}
